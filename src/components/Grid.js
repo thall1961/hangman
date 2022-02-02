@@ -1,14 +1,16 @@
 import React from 'react';
 import Row from './Row';
 
-export default (props) => {
+function Grid() {
   return (
-    <>
+    <div className="mx-auto">
       <Row/>
       <Row/>
       <Row/>
       <Row/>
       <Row/>
-    </>
+    </div>
   );
 }
+
+export default Grid;
