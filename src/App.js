@@ -1,4 +1,5 @@
 import './App.css';
+import Grid from './components/Grid';
 
 function App() {
   return (
@@ -6,28 +7,7 @@ function App() {
       <header className="App-header">
         WRDLE
       </header>
-      <div className="row">
-        <div className="col-2 p-5 bg-light">
-          <input type="text" />
-        </div>
-        <div className="col-2 p-5 bg-light">
-          <input type="text" />
-        </div>
-        <div className="col-2 p-5 bg-light">
-          <input type="text" />
-        </div>
-        <div className="col-2 p-5 bg-light">
-          <input type="text" />
-        </div>
-        <div className="col-2 p-5 bg-light">
-          <input type="text" />
-        </div>
-      </div>
-      <div className="row"></div>
-      <div className="row"></div>
-      <div className="row"></div>
-      <div className="row"></div>
-      <div className="row"></div>
+      <Grid />
     </div>
   );
 }
