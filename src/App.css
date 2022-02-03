@@ -35,3 +35,7 @@
   -ms-user-select: none;
   user-select: none;
 }
+
+.active {
+  border-bottom: 1px solid green;
+}

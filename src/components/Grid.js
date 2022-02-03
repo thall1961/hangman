@@ -1,24 +1,44 @@
-import React from 'react';
-import Row from './Row';
-import PropTypes from 'prop-types';
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
+
+const Guess = styled.div`
+  text-transform: uppercase;
+  width: 50px;
+  font-size: 2rem;
+  text-align: center;
+`;
 
 function Grid(props) {
-  console.log('props', props);
+  console.log("props", props);
   return (
     <div className="mx-auto mt-5">
-      <Row id="1" activeRow={props.activeRow === 0} activeCol={props.activeCol} guess={props.guess} />
-      <Row id="2" activeRow={props.activeRow === 1} activeCol={props.activeCol} guess={props.guess} />
-      <Row id="3" activeRow={props.activeRow === 2} activeCol={props.activeCol} guess={props.guess} />
-      <Row id="4" activeRow={props.activeRow === 3} activeCol={props.activeCol} guess={props.guess} />
-      <Row id="5" activeRow={props.activeRow === 4} activeCol={props.activeCol} guess={props.guess} />
+      {props.guesses.map((guess, r) => (
+        <div
+          key={Math.random().toString()}
+          className="d-flex justify-content-center align-items-center guess-row"
+        >
+          {guess.map((g, c) => (
+            <Guess key={Math.random().toString()} className="p-1 bg-light">
+              <div
+                className={`bg-white ${
+                  r === props.row && c === props.col ? "active" : ""
+                }`}
+              >
+                {g}
+              </div>
+            </Guess>
+          ))}
+        </div>
+      ))}
     </div>
   );
 }
 
 Grid.propTypes = {
-  activeRow: PropTypes.number,
-  activeCol: PropTypes.number,
-  guess: PropTypes.string
-}
+  guesses: PropTypes.any.isRequired,
+  row: PropTypes.number.isRequired,
+  col: PropTypes.number.isRequired,
+};
 
 export default Grid;
