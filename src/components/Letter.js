@@ -49,7 +49,7 @@ function Letter(props) {
     };
 
     return (
-        <div className="text-center mx-1 border rounded shadow p-1 bg-white no-highlight">
+        <div className={`text-center mx-1 border rounded shadow p-1 bg-white no-highlight ${props.status}`}>
             <Ltr
                 className={`mb-0 no-hightlight ${pressed ? "pressed" : ""}`}
                 onMouseLeave={() => mouseLeft()}
@@ -68,6 +68,7 @@ Letter.propTypes = {
     guessLetter: PropTypes.func,
     deleteLetter: PropTypes.func,
     nextGuess: PropTypes.func,
+    status: PropTypes.string
 };
 
 export default Letter;

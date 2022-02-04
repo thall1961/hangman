@@ -48,3 +48,15 @@
 .close {
     background: rgb(201, 177, 45) !important;
 }
+
+.unavailable {
+    background: #454545;
+}
+
+.yes {
+    background: green;
+}
+
+.no {
+    background: #282c34;
+}

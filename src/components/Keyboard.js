@@ -11,6 +11,25 @@ const KeyboardWrapper = styled.div`
 
 function Keyboard(props) {
     const layout = ["qwertyuiop", "asdfghjkl", "✅zxcvbnm⬅"];
+
+    const letterStatus = letter => {
+        const row = props.guesses.findIndex(g => g.includes(letter));
+        // no rows have the letter(i.e. the letter hasn't been guessed)
+        if (row < 0) {
+            return 'na';
+        }
+        // the letter has been guessed, but it's not in the answer
+        if (!props.answer.includes(letter)) {
+            return 'no';
+        }
+        const col = props.guesses[row].findIndex(g => g === letter);
+        if (props.answer[col] === letter) {
+            return 'yes';
+        } else {
+            return 'close';
+        }
+    }
+
     return (
         <KeyboardWrapper className="shadow rounded mt-5">
             {layout.map((letterRow, index) => (
@@ -25,6 +44,7 @@ function Keyboard(props) {
                             guessLetter={props.guessLetter}
                             deleteLetter={props.deleteLetter}
                             nextGuess={props.nextGuess}
+                            status={letterStatus(l)}
                         />
                     ))}
                 </div>

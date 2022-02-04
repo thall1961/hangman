@@ -10,7 +10,6 @@ const Guess = styled.div`
 `;
 
 function Grid(props) {
-    console.log("props", props);
     return (
         <div className="mx-auto mt-5">
             {props.guesses.map((guess, r) => (
