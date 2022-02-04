@@ -39,7 +39,7 @@ function Letter(props) {
     };
 
     const handleClick = () => {
-        if (props.letter === "❌") {
+        if (props.letter === "⬅") {
             props.deleteLetter();
         } else if (props.letter === "✅") {
             props.nextGuess();

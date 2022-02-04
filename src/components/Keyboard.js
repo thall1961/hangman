@@ -10,7 +10,7 @@ const KeyboardWrapper = styled.div`
 `;
 
 function Keyboard(props) {
-  const layout = ["qwertyuiop", "asdfghjkl", "✅zxcvbnm❌"];
+  const layout = ["qwertyuiop", "asdfghjkl", "✅zxcvbnm⬅"];
   return (
     <KeyboardWrapper className="shadow rounded mt-5">
       {layout.map((letterRow, index) => (

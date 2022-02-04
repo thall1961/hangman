@@ -13,7 +13,7 @@ function App() {
             .fill(" ")
             .map(() => new Array(5).fill(" "))
     );
-    const answer = "steam";
+    const answer = "simba";
 
     const updateGuesses = (guess) => {
         if (col < 5) {
@@ -51,7 +51,9 @@ function App() {
 
     return (
         <div className="App">
-            <header className="App-header">WRDLE</header>
+            <header className="App-header">
+                💫 MOUSE-LE 🐭
+            </header>
             <Grid guesses={guesses} row={row} col={col} answer={answer}/>
             <Keyboard
                 guessLetter={updateGuesses}
