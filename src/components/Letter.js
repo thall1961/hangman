@@ -9,7 +9,7 @@ const Ltr = styled.div`
   justify-content: center;
   align-items: center;
   transition: all 0.3s;
-  
+
   @media (min-width: 375px) {
     width: 18px
   }
@@ -21,7 +21,7 @@ const Ltr = styled.div`
   @media (min-width: 768px) {
     width: 35px
   }
-  
+
   &:hover {
     cursor: pointer;
   }

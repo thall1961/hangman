@@ -1,50 +1,50 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .guess-row {
-  height: 50px;
+    height: 50px;
 }
 
 .guess-row div,
 .guess-row div input {
-  height: 100%;
+    height: 100%;
 }
 
 .pressed {
-  background: grey !important;
-  box-shadow: 0;
+    background: grey !important;
+    box-shadow: 0;
 }
 
 .no-hightlight {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .active {
-  border-bottom: 1px solid green;
+    border-bottom: 1px solid green;
 }
 
 .correct {
-  background: green !important;
-  color: white !important;
+    background: green !important;
+    color: white !important;
 }
 
 .close {
-  background: rgb(201, 177, 45) !important;
+    background: rgb(201, 177, 45) !important;
 }

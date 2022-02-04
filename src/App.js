@@ -56,6 +56,8 @@ function App() {
             </header>
             <Grid guesses={guesses} row={row} col={col} answer={answer}/>
             <Keyboard
+                guesses={guesses}
+                answer={answer}
                 guessLetter={updateGuesses}
                 deleteLetter={deleteLetter}
                 nextGuess={nextGuess}
