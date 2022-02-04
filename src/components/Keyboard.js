@@ -14,6 +14,7 @@ function Keyboard(props) {
 
     const letterStatus = letter => {
         const row = props.guesses.findIndex(g => g.includes(letter));
+        console.log('row', row, 'no', !props.answer.includes(letter));
         // no rows have the letter(i.e. the letter hasn't been guessed)
         if (row < 0) {
             return 'na';

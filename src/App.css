@@ -53,10 +53,14 @@
     background: #454545;
 }
 
+.yes, .no {
+    color: white !important;
+}
+
 .yes {
-    background: green;
+    background: green !important;
 }
 
 .no {
-    background: #282c34;
+    background: #282c34 !important;
 }

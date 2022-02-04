@@ -21,16 +21,10 @@ function Grid(props) {
                         <Guess key={Math.random().toString()} className="p-1 bg-light">
                             <div
                                 className={`bg-white
-                  ${r === props.row && c === props.col ? " active " : ""}
-                  ${r < props.row && props.answer[c] === g ? " correct " : ""}
-                  ${
-                                    r < props.row &&
-                                    props.answer.includes(g) &&
-                                    props.answer[c] !== g
-                                        ? " close "
-                                        : ""
-                                }
-                  `}
+                                  ${r === props.row && c === props.col ? " active " : ""}
+                                  ${r < props.row && props.answer[c] === g ? " correct " : ""}
+                                  ${r < props.row && props.answer.includes(g) && props.answer[c] !== g ? " close " : ""}
+                                `}
                             >
                                 {g}
                             </div>

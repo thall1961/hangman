@@ -52,7 +52,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                💫 MOUSE-LE 🐭
+                DSNY
             </header>
             <Grid guesses={guesses} row={row} col={col} answer={answer}/>
             <Keyboard
