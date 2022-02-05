@@ -12103,6 +12103,7 @@ const words = [
     "sango",
     "sangs",
     "sanko",
+    "sanka",
     "sansa",
     "santo",
     "sants",

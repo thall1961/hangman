@@ -13,7 +13,7 @@ function App() {
             .fill(" ")
             .map(() => new Array(5).fill(" "))
     );
-    const answer = "simba";
+    const answer = "kuzco";
 
     const updateGuesses = (guess) => {
         if (col < 5) {
