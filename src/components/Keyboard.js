@@ -16,7 +16,7 @@ function Keyboard(props) {
         const row = props.guesses.findIndex(g => g.includes(letter));
         console.log('row', row, 'no', !props.answer.includes(letter));
         // no rows have the letter(i.e. the letter hasn't been guessed)
-        if (row < 0) {
+        if (row < 0 || row === props.row) {
             return 'na';
         }
         // the letter has been guessed, but it's not in the answer
@@ -59,7 +59,8 @@ Keyboard.propTypes = {
     deleteLetter: PropTypes.func.isRequired,
     nextGuess: PropTypes.func.isRequired,
     guesses: PropTypes.any,
-    answer: PropTypes.string
+    answer: PropTypes.string,
+    row: PropTypes.number
 };
 
 export default Keyboard;

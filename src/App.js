@@ -31,6 +31,9 @@ function App() {
     };
 
     const nextGuess = () => {
+        if (gameOver) {
+            return;
+        }
         if (col < 5) {
             alert("keep guessing");
             return;
@@ -43,6 +46,7 @@ function App() {
         if (guessStr === answer) {
             alert("You did it!");
             setGameOver(true);
+            setRow(row + 1);
             return;
         }
         setRow(row + 1);
@@ -54,6 +58,7 @@ function App() {
             <header className="App-header">
                 DSNY
             </header>
+            <small>*Hint - none of the words will have the same letter twice 👍</small>
             <Grid guesses={guesses} row={row} col={col} answer={answer}/>
             <Keyboard
                 guesses={guesses}
@@ -61,6 +66,7 @@ function App() {
                 guessLetter={updateGuesses}
                 deleteLetter={deleteLetter}
                 nextGuess={nextGuess}
+                row={row}
             />
         </div>
     );
