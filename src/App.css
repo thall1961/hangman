@@ -4,7 +4,7 @@
 
 .App-header {
     /*background-color: #282c34;*/
-    background: radial-gradient(#24479f, #060322);
+    background: cadetblue;
     min-height: 50px;
     display: flex;
     flex-direction: column;
@@ -12,6 +12,7 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    font-weight: 900
 }
 
 .guess-row {

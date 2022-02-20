@@ -10,20 +10,14 @@ const KeyboardWrapper = styled.div`
 `;
 
 function Keyboard(props) {
-    const layout = ["qwertyuiop", "asdfghjkl", "✅zxcvbnm⬅"];
+    const layout = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
 
     const letterStatus = letter => {
-        const row = props.guesses.findIndex(g => g.includes(letter));
-        // no rows have the letter(i.e. the letter hasn't been guessed)
-        if (row < 0 || row === props.row) {
-            return 'na';
-        }
         // the letter has been guessed, but it's not in the answer
         if (!props.answer.includes(letter)) {
             return 'no';
         }
-        const col = props.guesses[row].findIndex(g => g === letter);
-        if (props.answer[col] === letter) {
+        if (props.answer.includes(letter)) {
             return 'yes';
         } else {
             return 'close';
@@ -42,8 +36,6 @@ function Keyboard(props) {
                             key={index}
                             letter={l}
                             guessLetter={props.guessLetter}
-                            deleteLetter={props.deleteLetter}
-                            nextGuess={props.nextGuess}
                             status={letterStatus(l)}
                         />
                     ))}
@@ -55,11 +47,8 @@ function Keyboard(props) {
 
 Keyboard.propTypes = {
     guessLetter: PropTypes.func.isRequired,
-    deleteLetter: PropTypes.func.isRequired,
-    nextGuess: PropTypes.func.isRequired,
     guesses: PropTypes.any,
-    answer: PropTypes.string,
-    row: PropTypes.number
+    answer: PropTypes.string
 };
 
 export default Keyboard;
