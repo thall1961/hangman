@@ -1,7 +1,6 @@
 const words = [
     "simba",
     "ariel",
-    "arial",
     "bambi",
     "belle",
     "alice",

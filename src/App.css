@@ -3,7 +3,8 @@
 }
 
 .App-header {
-    background-color: #282c34;
+    /*background-color: #282c34;*/
+    background: radial-gradient(#24479f, #060322);
     min-height: 50px;
     display: flex;
     flex-direction: column;
@@ -24,7 +25,7 @@
 
 .pressed {
     background: grey !important;
-    box-shadow: 0;
+    box-shadow: none;
 }
 
 .no-hightlight {

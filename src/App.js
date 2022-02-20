@@ -13,7 +13,7 @@ function App() {
             .fill(" ")
             .map(() => new Array(5).fill(" "))
     );
-    const answer = "kuzco";
+    const answer = "ariel";
 
     const updateGuesses = (guess) => {
         if (col < 5) {
@@ -51,14 +51,21 @@ function App() {
         }
         setRow(row + 1);
         setCol(0);
+
+        setTimeout(() => {
+            if (row === 6) {
+                alert('Better luck next time...🥲');
+                setGameOver(true);
+            }
+        }, 1000);
     };
 
     return (
         <div className="App">
             <header className="App-header">
-                DSNY
+                MOM&lsquo;S GAME
             </header>
-            <small>*Hint - none of the words will have the same letter twice 👍</small>
+            <small>*Hint - <span className="na">W</span><span className="yes">O</span><span className="close">O</span><span>D</span><span className="yes">Y</span> - there may or may not actually be 2 Os</small>
             <Grid guesses={guesses} row={row} col={col} answer={answer}/>
             <Keyboard
                 guesses={guesses}
