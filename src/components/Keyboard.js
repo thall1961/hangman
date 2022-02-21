@@ -14,13 +14,11 @@ function Keyboard(props) {
 
     const letterStatus = letter => {
         // the letter has been guessed, but it's not in the answer
-        if (!props.answer.includes(letter)) {
+        if (!props.answer.includes(letter) && props.guesses.includes(letter)) {
             return 'no';
         }
-        if (props.answer.includes(letter)) {
+        if (props.answer.includes(letter) && props.guesses.includes(letter)) {
             return 'yes';
-        } else {
-            return 'close';
         }
     }
 

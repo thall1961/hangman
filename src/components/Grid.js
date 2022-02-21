@@ -14,7 +14,7 @@ function Grid(props) {
         <div className="mx-auto mt-5">
             <div className="d-flex justify-content-center align-items-center guess-row">
                 {props.answer.split('').map(letter => (
-                    <Guess key={Math.random().toString()} className="p-1 bg-light">
+                    <Guess key={Math.random().toString()} className="p-1 border border-dark mx-1">
                         <div className={`bg-white ${props.guesses.includes(letter) ? " d-block" : " d-none "}`}>
                             {letter}
                         </div>
